@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'crud-ManutencaoPecasRoupas';
+  title = ' Manutenção de Peças de Roupas';
 }
