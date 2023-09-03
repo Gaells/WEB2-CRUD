@@ -3,7 +3,8 @@ export class Manutencao {
         public id?: number,
         public nome?: string,
         public peca?: string,
-        public status?: string){
+        public valorUn?: number,
+        public dtEntrega?: number){
 
         }
 }

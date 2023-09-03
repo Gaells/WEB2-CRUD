@@ -22,6 +22,32 @@ minlength="2" required>
     <div [hidden]="!peca.errors?.['required']">Digite qual a Peça.</div>
     </div>
     </div>
+    <div class="well">
+        <form #formManutencao="ngForm">
+        <div class="form-group">
+        <label for="valorUn">Preço/un</label>
+        <input type="text" class="form-control" id="valorUn" name="valorUn"
+        [(ngModel)]="manutencao.valorUn"
+        #valorUn="ngModel"
+        minlength="2" required>
+        <div *ngIf="valorUn.errors && (valorUn.dirty || valorUn.touched)" class="alert alert-danger">
+        <div [hidden]="!valorUn.errors?.['required']"> Digite o valor unitário da Peça: </div>
+        <div [hidden]="!valorUn.errors?.['minlength']">O valor unitário deve conter valores válidos. </div>
+        </div>
+        </div>
+        <div class="well">
+            <form #formManutencao="ngForm">
+            <div class="form-group">
+            <label for="dtEntrega">Data de entrega:</label>
+            <input type="text" class="form-control" id="dtEntrega" name="dtEntrega"
+            [(ngModel)]="manutencao.dtEntrega"
+            #dtEntrega="ngModel"
+            minlength="2" required>
+            <div *ngIf="dtEntrega.errors && (dtEntrega.dirty || dtEntrega.touched)" class="alert alert-danger">
+            <div [hidden]="!dtEntrega.errors?.['required']"> Digite a data de entrega:</div>
+            <div [hidden]="!dtEntrega.errors?.['minlength']">O datat deve conter valores validos. </div>
+            </div>
+            </div>
     <div class="form-group">
     <button type="button" class="btn btn-primary"
     (click)="atualizar()"
