@@ -24,9 +24,9 @@ export class ListarManutencaoComponent{
 
   remover($event: any, manutencao: Manutencao): void {
     $event.preventDefault();
-    if (confirm(`Deseja realmente remover a Manutenção ${manutencao.nome}?`)) {
-    this.manutencaoService.remover(manutencao.id!);
-    this.manutencao = this.listarTodos();
-    }
+      if (confirm(`Deseja realmente remover a peça: ${manutencao.peca}?`)) {
+      this.manutencaoService.remover(manutencao.id!);
+      this.manutencao = this.listarTodos();
+      }
     }
 }

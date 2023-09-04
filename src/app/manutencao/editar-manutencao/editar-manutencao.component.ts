@@ -37,7 +37,7 @@ export class EditarManutencaoComponent implements OnInit {
       // Efetivamente atualiza a manutencao
       this.manutencaoService.atualizar(this.manutencao);
       // Redireciona para /manutencao/listar
-      this.router.navigate(['/manutencao']);
+      this.router.navigate(['/manutencao/listar']);
       }
       }
 }
